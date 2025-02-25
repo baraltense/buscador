@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Ítems OSRS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<h1>Buscador de Ítems OSRS</h1>
+<p>Escribe el nombre del ítem para buscarlo:</p>
+
+<div id="search-container">
+    <input type="text" id="itemName" placeholder="Ej. Blood_shard" oninput="searchItems()" autocomplete="off">
+    <button onclick="searchItem()">Buscar</button>
+    <div id="suggestions"></div>
+</div>
+
+<div id="result">
+    <h2>Resultado:</h2>
+    <div class="item-details">
+        <img id="itemImage" src="" alt="Imagen del ítem">
+        <div class="item-info">
+            <p id="itemNameResult"></p>
+            <p id="itemIdResult"></p>
+            <p id="itemValueResult"></p>
+            <p id="itemExamineResult"></p>
+            <p id="itemLimitResult"></p>
+        </div>
+    </div>
+    <p id="errorMessage" class="error-message" style="display:none;">Imagen no encontrada.</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
